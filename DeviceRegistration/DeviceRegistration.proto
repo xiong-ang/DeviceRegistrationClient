@@ -1,0 +1,79 @@
+syntax = "proto3";
+
+option csharp_namespace = "DeviceRegistion";
+
+package DeviceRegistionDataService;
+
+service DataService {
+  rpc Status (Empty) returns (StatusRespondData) {}
+  rpc Auth (AuthRequestData) returns (AuthRespondData) {}
+  rpc Save (SaveRequestData) returns (SaveRespondData) {}
+  // rpc Read (ReadRequestData) returns (ReadRespondData) {}
+}
+
+message Empty{
+}
+
+enum SeverStatusEnum {
+    UNAVAILABLE = 0;
+    AVAILABLE = 1;
+	BUSY = 2;
+    INTERNAL_ERROR = 3;
+}
+
+message StatusRespondData {
+  bool isSucceed = 1;
+  SeverStatusEnum status = 2;
+}
+
+message AuthRequestData {
+	string clientId = 1;
+	string clientSecret = 2;
+}
+
+message AuthRespondData {
+	bool isSucceed = 1;
+	string authToken = 2;
+}
+
+message SaveRequestData {
+  string clientId = 1;
+  string authToken = 2;
+  repeated Device devices= 3;
+}
+
+message Device {
+  repeated CipKey cipKeys = 1;
+  string name = 2;
+  Version version = 3;
+  string serial = 4;
+  repeated Serial series = 5;
+}
+
+message CipKey{
+	int32 codeID = 1;
+	int32 typeID = 2;
+}
+
+enum LifecycleEnum {
+	ACTIVE = 0;
+	ACTIVE_MATURE = 1;
+	LIFECYCLE_DETAILS = 2;
+	END_OF_LIFE = 3;
+	DISCONTINUED = 4;
+}
+
+message Version{
+  LifecycleEnum lifecycle = 1;
+  string name = 2;
+}
+
+message Serial {
+  string name = 1;
+  repeated Version versions = 2;
+}
+
+message SaveRespondData {
+	bool isSucceed = 1;
+	string message = 2;
+}
