@@ -1,72 +1,38 @@
 {
   "devices": [
     {
+      "serialNumber": "55jfksjflklxkfhjakfjkshf==xx", //??????
       "cipKeys": [
         {
           "codeID": 187,
-          "typeID": 115
+          "typeID": 115,
+          "vendorID": 2
         }
       ],
 
-      "name": "DRIVES Kinetix 2000",
+      "catalogNumber": "DRIVES Kinetix 2000",
+      "serial": "A",
+      "deviceLifecycle": "LifeCycle Details",
 
-      "version": {
+      "inDeviceVersion": {
         "lifecycle": "LifeCycle Details",
         "name": "1.099"
       },
 
-      "serial": "A",
-
-      "series": [ // all serials
+      "firmwareVersions": [
         {
-          "name": "A",
-          "versions": [
-            {
-              "lifecycle": "LifeCycle Details",
-              "name": "1.099"
-            },
-            {
-              "lifecycle": "LifeCycle Details",
-              "name": "1.098kit2"
-            },
-            {
-              "lifecycle": "LifeCycle Details",
-              "name": "1.097kit2"
-            },
-            {
-              "lifecycle": "LifeCycle Details",
-              "name": "1.096kit2"
-            },
-            {
-              "lifecycle": "LifeCycle Details",
-              "name": "1.095kit2"
-            }
-          ]
+          "lifecycle": "LifeCycle Details",
+          "replacements": "CF Plus",
+          "name": "1.099",
+          "releaseNotes": "http://ssss.yuxhkjfksjlf.com/xx.pdf",
+          "PSA": "http://ssss.yuxhkjfksjlf.com/xx.pdf"
         },
         {
-          "name": "B",
-          "versions": [
-            {
-              "lifecycle": "LifeCycle Details",
-              "name": "1.099"
-            },
-            {
-              "lifecycle": "LifeCycle Details",
-              "name": "1.098kit2"
-            },
-            {
-              "lifecycle": "LifeCycle Details",
-              "name": "1.097kit2"
-            },
-            {
-              "lifecycle": "LifeCycle Details",
-              "name": "1.096kit2"
-            },
-            {
-              "lifecycle": "LifeCycle Details",
-              "name": "1.095kit2"
-            }
-          ]
+          "lifecycle": "LifeCycle Details",
+          "replacements": "CF Plus",
+          "name": "2.000",
+          "releaseNotes": "http://ssss.yuxhkjfksjlf.com/xx.pdf",
+          "PSA": "http://ssss.yuxhkjfksjlf.com/xx.pdf"
         }
       ]
     }
