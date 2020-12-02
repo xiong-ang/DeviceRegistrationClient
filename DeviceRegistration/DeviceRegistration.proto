@@ -43,16 +43,19 @@ message SaveRequestData {
 }
 
 message Device {
-  repeated CipKey cipKeys = 1;
-  string name = 2;
-  Version version = 3;
+  string serialNumber = 1;
+  repeated CipKey cipKeys = 2;
+  string catalogNumber = 3;
   string serial = 4;
-  repeated Serial series = 5;
+  LifecycleEnum deviceLifecycle = 5;
+  Version inDeviceVersion = 6;
+  repeated Version firmwareVersions = 7;
 }
 
 message CipKey{
 	int32 codeID = 1;
 	int32 typeID = 2;
+	int32 vendorID = 3;
 }
 
 enum LifecycleEnum {
@@ -65,12 +68,10 @@ enum LifecycleEnum {
 
 message Version{
   LifecycleEnum lifecycle = 1;
-  string name = 2;
-}
-
-message Serial {
-  string name = 1;
-  repeated Version versions = 2;
+  string replacements = 2;
+  string name = 3;
+  string releaseNotes = 4;
+  string PSA = 5;
 }
 
 message SaveRespondData {
