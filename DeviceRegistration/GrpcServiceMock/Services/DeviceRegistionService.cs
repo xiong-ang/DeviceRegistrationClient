@@ -34,6 +34,7 @@ namespace GrpcServiceMock
 
         public override Task<SaveRespondData> Save(SaveRequestData request, ServerCallContext context)
         {
+            Console.WriteLine("Get Data Count: " + request.Devices.Count);
             return Task.FromResult(new SaveRespondData
             {
                 IsSucceed = true,

@@ -44,18 +44,28 @@ message SaveRequestData {
 
 message Device {
   string serialNumber = 1;
-  repeated CipKey cipKeys = 2;
-  string catalogNumber = 3;
-  string serial = 4;
-  LifecycleEnum deviceLifecycle = 5;
-  Version inDeviceVersion = 6;
-  repeated Version firmwareVersions = 7;
+  TopologyInfo topologyInfo = 2;
+  UserInfo userInfo = 3;
+  repeated CipKey cipKeys = 4;
+  string catalogNumber = 5;
+  string serial = 6;
+  LifecycleEnum deviceLifecycle = 7;
+  Version inDeviceVersion = 8;
+  repeated Version firmwareVersions = 9;
 }
 
 message CipKey{
 	int32 codeID = 1;
 	int32 typeID = 2;
 	int32 vendorID = 3;
+}
+
+message TopologyInfo{
+	string path = 1;
+}
+
+message UserInfo{
+	string ip = 1;
 }
 
 enum LifecycleEnum {
