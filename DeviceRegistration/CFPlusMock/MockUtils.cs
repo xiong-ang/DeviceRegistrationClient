@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Version = DeviceRegistion.Version;
 
 namespace CFPlusMock
@@ -32,50 +30,7 @@ namespace CFPlusMock
             Random ran = new Random();
             return ran.Next(1, 100);
         }
-        /*
-             {
-      "serialNumber": "55jfksjflklxkfhjakfjkshf==xx", //??????
-      "topologyInfo": {
-        "path": "apnsksn45//10.224.33.25//1/0"
-      },
-      "userInfo": {
-        "ip": "10.24.56.23"
-      },
-      "cipKeys": [
-        {
-          "codeID": 187,
-          "typeID": 115,
-          "vendorID": 2
-        }
-      ],
 
-      "catalogNumber": "DRIVES Kinetix 2000",
-      "serial": "A",
-      "deviceLifecycle": "LifeCycle Details",
-
-      "inDeviceVersion": {
-        "lifecycle": "LifeCycle Details",
-        "name": "1.099"
-      },
-
-      "firmwareVersions": [
-        {
-          "lifecycle": "LifeCycle Details",
-          "replacements": "CF Plus",
-          "name": "1.099",
-          "releaseNotes": "http://ssss.yuxhkjfksjlf.com/xx.pdf",
-          "PSA": "http://ssss.yuxhkjfksjlf.com/xx.pdf"
-        },
-        {
-          "lifecycle": "LifeCycle Details",
-          "replacements": "CF Plus",
-          "name": "2.000",
-          "releaseNotes": "http://ssss.yuxhkjfksjlf.com/xx.pdf",
-          "PSA": "http://ssss.yuxhkjfksjlf.com/xx.pdf"
-        }
-      ]
-    }
-         */
         private Device GetMockDevice(UserInfo userInfo)
         {
             Device device = new Device();
